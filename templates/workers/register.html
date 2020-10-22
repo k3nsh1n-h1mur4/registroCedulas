@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+
+{% block content %}
+
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col">
+				<form method="POST" enctype="multipart/form-data">
+				<input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+					<div class="form-group">
+						<label for="name">Nombre</label>
+						<input type="text" name="name" id="" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<label for="matricula">Matrícula</label>
+						<input type="text" name="matricula" id="" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<label for="turno">Turno</label>
+						<input type="text" name="turno" id="" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<label for="adscripcion">Unidad de Adscripción</label>
+						<input type="text" name="adscripcion" id="" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<label for="img">Fotografía</label>
+						<input type="file" name="img" id="" class="form-control">
+					</div>
+
+					<input type="submit" value="Registrar" class="btn btn-primary">
+					
+				</form>
+						</div>
+					</div>
+				</div>
+
+{% endblock content %}
